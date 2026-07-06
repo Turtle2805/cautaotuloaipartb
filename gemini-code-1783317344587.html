@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Loại & Trật Tự Tính Từ Nâng Cao - Ms Lê Hằng English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes floatPattern {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 100px 100px, 50px 50px; }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #6C5CE7, #00CEC9, #FF7675, #FDCB6E);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M9 26c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8C11.1 18.4 10.2 18 9 18c-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8C6.9 25.6 7.8 26 9 26zm30 0c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8-.7-.8-1.7-1.2-2.8-1.2-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8.7.8 1.7 1.2 2.8 1.2zM24 48c1.2 0 2.1-.4 2.8-1.2.8-.7 1.2-1.7 1.2-2.8 0-1.2-.4-2.1-1.2-2.8-.7-.8-1.7-1.2-2.8-1.2-1.2 0-2.1.4-2.8 1.2-.8.7-1.2 1.7-1.2 2.8 0 1.2.4 2.1 1.2 2.8.7.8 1.7 1.2 2.8 1.2z' fill='%23ffffff' fill-opacity='0.8' fill-rule='evenodd'/%3E%3C/svg%3E"), 
+                            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.6'%3E%3Cpath d='M10 15h4v4h-4zm20 30h4v4h-4zm40-20h4v4h-4zM20 70h4v4h-4z'/%3E%3Cpath d='M9.5 10.5l3 3m-3 0l3-3m57.5 17.5l3 3m-3 0l3-3M26.5 42.5l3 3m-3 0l3-3' stroke='%23fff' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+            animation: floatPattern 25s linear infinite;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .header-panel {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: 3px solid #6C5CE7;
+        }
+
+        .header-panel h1 {
+            font-size: 15pt;
+            color: #6C5CE7;
+            margin: 0;
+            font-weight: 900;
+        }
+
+        .alert-box {
+            background-color: #FFF3CD;
+            border: 3px solid #FFEBAA;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 0 #E6B800;
+            text-align: center;
+            color: #856404;
+        }
+
+        .alert-box h2 {
+            margin: 0 0 8px 0;
+            font-size: 13pt;
+            font-weight: 900;
+            color: #D35400;
+        }
+
+        .alert-box p {
+            margin: 5px 0;
+            font-size: 10.5pt;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.06);
+            border: 3px solid #F1F2F6;
+            transition: transform 0.3s ease;
+        }
+
+        .question-text {
+            font-size: 11.5pt;
+            color: #2C3E50;
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            background: #FFFFFF;
+            border: 3px solid #E4E7EB;
+            border-radius: 15px;
+            padding: 12px 18px;
+            font-size: 11pt;
+            font-weight: 700;
+            color: #4A5568;
+            text-align: left;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #E4E7EB;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 6px 0 #E4E7EB;
+            background-color: #F8FAFC;
+        }
+
+        .option-btn.correct {
+            background-color: #00D26A !important;
+            border-color: #00A855 !important;
+            color: white !important;
+            box-shadow: 0 4px 0 #00A855 !important;
+        }
+
+        .option-btn.wrong {
+            background-color: #FF4757 !important;
+            border-color: #D63031 !important;
+            color: white !important;
+            box-shadow: 0 4px 0 #D63031 !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .shake-animation {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .explanation-box {
+            display: none;
+            margin-top: 15px;
+            background: #F8FAFC;
+            border-left: 6px solid #00CEC9;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .explanation-title {
+            font-weight: 900;
+            color: #00CEC9;
+            margin-bottom: 8px;
+            font-size: 11pt;
+        }
+
+        .explanation-step {
+            font-size: 10pt;
+            color: #4A5568;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        
+        .explanation-step strong {
+            color: #2D3748;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin: 35px 0 50px 0;
+        }
+
+        .btn-submit {
+            background: #FDCB6E;
+            color: #2C3E50;
+            font-size: 14pt;
+            font-weight: 900;
+            padding: 12px 45px;
+            border: 4px solid #E6A115;
+            border-radius: 22px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #E6A115;
+            transition: all 0.1s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 #E6A115;
+        }
+
+        .modal-result {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-result-content {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            border: 4px solid #00CEC9;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .modal-score {
+            font-size: 28pt;
+            font-weight: 900;
+            color: #00CEC9;
+            margin: 12px 0;
+        }
+
+        .modal-comment {
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #4A5568;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .modal-close-btn {
+            background: #00CEC9;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 11pt;
+            font-weight: 900;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 0 #009E9B;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <div class="header-panel">
+            <h1>Giáo viên hướng dẫn: Ms Lê Hằng English</h1>
+        </div>
+
+        <div class="alert-box">
+            <h2>⚠️ THỬ THÁCH NGỮ PHÁP 50 CÂU HSA ⚠️</h2>
+            <p>Phần này kết hợp các bẫy Từ loại nâng cao và trật tự Tính từ OpSACOMP cực kỳ quan trọng. Con nhớ làm đến đâu đọc giải thích đến đó để ngấm kiến thức nhé!</p>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="btn-submit" onclick="submitQuiz()">NỘP BÀI XEM ĐIỂM SỐ</button>
+        </div>
+    </div>
+
+    <div class="modal-result" id="result-modal">
+        <div class="modal-result-content">
+            <div style="font-size: 35pt;">🎯</div>
+            <div style="font-weight: 900; font-size: 15pt; color: #2C3E50;">KẾT QUẢ BÀI LÀM CỦA CON</div>
+            <div class="modal-score" id="modal-score-text">0/0</div>
+            <div class="modal-comment" id="modal-comment-text">Lời nhận xét từ cô...</div>
+            <button class="modal-close-btn" onclick="closeModal()">ĐÓNG ĐỂ XEM LẠI BÀI</button>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                id: 1,
+                question: "The sudden ________ of the historic monument caused a huge wave of public outcry across the entire nation.",
+                options: [{key:"A",text:"destroy"},{key:"B",text:"destructive"},{key:"C",text:"destruction"},{key:"D",text:"destructively"}],
+                correct: "C",
+                explanation: {
+                    step1: "Sự phá hủy đột ngột của di tích lịch sử đã gây ra một làn sóng phản đối dữ dội từ công chúng trên khắp cả nước.",
+                    step2: "A. destroy (v); B. destructive (adj); C. destruction (n); D. destructively (adv).",
+                    step3: "Vị trí này đứng sau tính từ 'sudden' và đứng trước giới từ 'of' nên bắt buộc phải chọn một danh từ (n) làm chủ ngữ chính cho câu.",
+                    step4: "Do đó, danh từ 'destruction' là đáp án đúng duy nhất thỏa mãn ngữ pháp."
+                }
+            },
+            {
+                id: 2,
+                question: "Many experts believe that the new economic policy will ________ improve the living standards of the local people.",
+                options: [{key:"A",text:"significance"},{key:"B",text:"significant"},{key:"C",text:"signify"},{key:"D",text:"significantly"}],
+                correct: "D",
+                explanation: {
+                    step1: "Nhiều chuyên gia tin rằng chính sách kinh tế mới sẽ cải thiện đáng kể mức sống của người dân địa phương.",
+                    step2: "A. significance (n); B. significant (adj); C. signify (v); D. significantly (adv).",
+                    step3: "Khoảng trống đứng giữa trợ động từ khuyết thiếu 'will' và động từ thường 'improve' nên cần một trạng từ (adv) để bổ nghĩa cho động từ đó.",
+                    step4: "Trạng từ 'significantly' mang nghĩa 'một cách đáng kể', hoàn toàn phù hợp."
+                }
+            },
+            {
+                id: 3,
+                question: "It is ________ to assume that all teenagers are addicted to social media without considering their diverse personal interests.",
+                options: [{key:"A",text:"logic"},{key:"B",text:"logical"},{key:"C",text:"illogical"},{key:"D",text:"illogically"}],
+                correct: "C",
+                explanation: {
+                    step1: "Thật là vô lý khi cho rằng tất cả thanh thiếu niên đều nghiện mạng xã hội mà không xem xét đến sở thích cá nhân đa dạng của họ.",
+                    step2: "A. logic (n); B. logical (adj - hợp lý); C. illogical (adj - phi lý, vô lý); D. illogically (adv).",
+                    step3: "Cấu trúc: It + is + adj + to V. Vị trí này cần một tính từ. Xét về mặt ngữ nghĩa, việc quy chụp toàn bộ giới trẻ nghiện mạng xã hội là 'vô lý / phi lý'.",
+                    step4: "Loại B vì ngược nghĩa logic của câu."
+                }
+            },
+            {
+                id: 4,
+                question: "The company’s ________ to environmental sustainability has earned it several prestigious awards from international conservation organizations lately.",
+                options: [{key:"A",text:"commit"},{key:"B",text:"committed"},{key:"C",text:"commitment"},{key:"D",text:"committing"}],
+                correct: "C",
+                explanation: {
+                    step1: "Sự cam kết của công ty đối với sự bền vững môi trường đã mang lại cho họ một vài giải thưởng danh giá từ các tổ chức bảo tồn quốc tế gần đây.",
+                    step2: "A. commit (v); B. committed (adj/v-ed); C. commitment (n); D. committing (v-ing).",
+                    step3: "Đứng sau sở hữu cách 'The company’s' đóng vai trò làm chủ ngữ chính cho câu, ta cần một danh từ (n).",
+                    step4: "Danh từ 'commitment' tạo thành cụm nghĩa 'sự cam kết đối với cái gì'."
+                }
+            },
+            {
+                id: 5,
+                question: "He provided a very ________ explanation for his absence, yet his manager still felt there was something being hidden.",
+                options: [{key:"A",text:"persuade"},{key:"B",text:"presuasive"},{key:"C",text:"persuasively"},{key:"D",text:"persuasion"}],
+                correct: "B",
+                explanation: {
+                    step1: "Anh ấy đã đưa ra một lời giải thích rất thuyết phục cho sự vắng mặt của mình, nhưng người quản lý vẫn cảm thấy có điều gì đó đang bị che giấu.",
+                    step2: "A. persuade (v); B. persuasive (adj); C. persuasively (adv); D. persuasion (n).",
+                    step3: "Vị trí đứng sau trạng từ 'very' và đứng trước danh từ 'explanation' nên cần điền một tính từ (adj) để bổ nghĩa cho danh từ đó.",
+                    step4: "Tính từ 'persuasive' mang nghĩa 'có tính thuyết phục', đáp ứng đúng yêu cầu."
+                }
+            },
+            {
+                id: 6,
+                question: "Scientists are concerned about the ________ of natural resources if we continue to consume them at the current rate.",
+                options: [{key:"A",text:"exhaust"},{key:"B",text:"exhaustive"},{key:"C",text:"exhaustion"},{key:"D",text:"exhaustively"}],
+                correct: "C",
+                explanation: {
+                    step1: "Các nhà khoa học lo ngại về sự cạn kiệt tài nguyên thiên nhiên nếu chúng ta tiếp tục tiêu thụ chúng với tốc độ như hiện tại.",
+                    step2: "A. exhaust (v); B. exhaustive (adj - thấu đáo, toàn diện); C. exhaustion (n - sự cạn kiệt, sự kiệt sức); D. exhaustively (adv).",
+                    step3: "Khoảng trống đứng sau mạo từ 'the' và trước giới từ 'of' nên ta cần một danh từ (n).",
+                    step4: "Danh từ 'exhaustion' mang nghĩa sự cạn kiệt tài nguyên trong ngữ cảnh này."
+                }
+            },
+            {
+                id: 7,
+                question: "The ________ of the new software was delayed due to some unexpected technical glitches discovered during the final testing phase.",
+                options: [{key:"A",text:"implement"},{key:"B",text:"implementation"},{key:"C",text:"implementer"},{key:"D",text:"implemented"}],
+                correct: "B",
+                explanation: {
+                    step1: "Việc triển khai phần mềm mới đã bị trì hoãn do một số lỗi kỹ thuật bất ngờ được phát hiện trong giai đoạn thử nghiệm cuối cùng.",
+                    step2: "A. implement (v); B. implementation (n - sự triển khai, thực thi); C. implementer (n - người thực hiện); D. implemented (v-ed).",
+                    step3: "Đứng sau mạo từ 'The' và đứng trước giới từ 'of' làm chủ ngữ chính, ta cần một danh từ chỉ sự vật/sự việc.",
+                    step4: "Chọn 'implementation' (sự triển khai phần mềm). Loại C vì 'implementer' chỉ người không phù hợp."
+                }
+            },
+            {
+                id: 8,
+                question: "She has been ________ involved in various charitable activities to help underprivileged children in rural areas for many years.",
+                options: [{key:"A",text:"energy"},{key:"B",text:"energetic"},{key:"C",text:"energetically"},{key:"D",text:"energize"}],
+                correct: "C",
+                explanation: {
+                    step1: "Cô ấy đã tham gia một cách đầy năng nổ vào các hoạt động từ thiện khác nhau để giúp đỡ trẻ em nghèo vùng nông thôn trong nhiều năm.",
+                    step2: "A. energy (n); B. energetic (adj); C. energetically (adv); D. energize (v).",
+                    step3: "Khoảng trống đứng trước phân từ hai 'involved' (đóng vai trò như một tính từ hoặc động từ bị động) nên cần một trạng từ (adv) bổ nghĩa.",
+                    step4: "Trạng từ 'energetically' nghĩa là một cách tích cực, đầy năng lượng."
+                }
+            },
+            {
+                id: 9,
+                question: "The billionaire recently purchased a ______ yacht to sail around the Mediterranean during the upcoming summer holiday.",
+                options: [{key:"A",text:"luxurious massive white Italian"},{key:"B",text:"Italian luxurious massive white"},{key:"C",text:"massive white luxurious Italian"},{key:"D",text:"white Italian massive luxurious"}],
+                correct: "A",
+                explanation: {
+                    step1: "Vị tỷ phú gần đây đã mua một chiếc du thuyền Ý màu trắng, đồ sộ và sang trọng để đi thuyền quanh Địa Trung Hải.",
+                    step2: "Áp dụng quy tắc trật tự tính từ OpSACOMP: Opinion (Ý kiến) -> Size (Kích cỡ) -> Age -> Shape -> Color (Màu sắc) -> Origin (Nguồn gốc) -> Material -> Purpose.",
+                    step3: "Phân tích các từ: luxurious (Opinion) -> massive (Size) -> white (Color) -> Italian (Origin). Sắp xếp lại: luxurious massive white Italian.",
+                    step4: "Do đó phương án A là lựa chọn chính xác duy nhất."
+                }
+            },
+            {
+                id: 10,
+                question: "The candidate’s ________ performance during the interview impressed the hiring managers and secured him the high-level position.",
+                options: [{key:"A",text:"exception"},{key:"B",text:"exceptional"},{key:"C",text:"exceptionally"},{key:"D",text:"except"}],
+                correct: "B",
+                explanation: {
+                    step1: "Màn thể hiện xuất sắc của ứng viên trong buổi phỏng vấn đã gây ấn tượng với các nhà quản lý tuyển dụng và giúp anh ấy có được vị trí cấp cao.",
+                    step2: "A. exception (n); B. exceptional (adj - kiệt xuất, xuất sắc); C. exceptionally (adv); D. except (prep).",
+                    step3: "Đứng trước danh từ 'performance' bổ nghĩa cho danh từ này, ta cần một tính từ (adj).",
+                    step4: "Tính từ 'exceptional' mang nghĩa xuất sắc, xuất chúng."
+                }
+            },
+            {
+                id: 11,
+                question: "The doctor warned that the ________ of the virus could be prevented by maintaining high standards of personal hygiene.",
+                options: [{key:"A",text:"transmit"},{key:"B",text:"transmission"},{key:"C",text:"transmissible"},{key:"D",text:"transmitted"}],
+                correct: "B",
+                explanation: {
+                    step1: "Bác sĩ cảnh báo rằng sự lây truyền của virus có thể được ngăn chặn bằng cách duy trì các tiêu chuẩn vệ sinh cá nhân cao.",
+                    step2: "A. transmit (v); B. transmission (n - sự lây truyền); C. transmissible (adj); D. transmitted (v-ed).",
+                    step3: "Khoảng trống đứng sau mạo từ 'the' và trước giới từ 'of' làm chủ ngữ cho mệnh đề 'that', cần điền một danh từ (n).",
+                    step4: "Danh từ 'transmission' (sự lây truyền bệnh) hoàn toàn thích hợp."
+                }
+            },
+            {
+                id: 12,
+                question: "She presented her research in a ______ folder, which immediately impressed the academic committee at the university.",
+                options: [{key:"A",text:"blue plastic simple rectangular"},{key:"B",text:"simple rectangular blue plastic"},{key:"C",text:"rectangular blue simple plastic"},{key:"D",text:"plastic simple blue rectangular"}],
+                correct: "B",
+                explanation: {
+                    step1: "Cô ấy đã trình bày nghiên cứu của mình trong một thư mục nhựa màu xanh hình chữ nhật đơn giản.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích từ loại: simple (Opinion) -> rectangular (Shape) -> blue (Color) -> plastic (Material). Thứ tự chuẩn: simple rectangular blue plastic.",
+                    step4: "Do đó ta chọn phương án B."
+                }
+            },
+            {
+                id: 13,
+                question: "The heavy rain ________ affected the outdoor concert, forcing the organizers to cancel the event at the last minute.",
+                options: [{key:"A",text:"adverse"},{key:"B",text:"adversity"},{key:"C",text:"adversely"},{key:"D",text:"adverseness"}],
+                correct: "C",
+                explanation: {
+                    step1: "Cơn mưa lớn đã ảnh hưởng bất lợi đến buổi hòa nhạc ngoài trời, buộc các nhà tổ chức phải hủy bỏ sự kiện vào phút chót.",
+                    step2: "A. adverse (adj); B. adversity (n); C. adversely (adv - một cách bất lợi, tiêu cực); D. adverseness (n).",
+                    step3: "Đứng trước động từ thường chia ở quá khứ 'affected' nhằm bổ nghĩa cho hành động đó, ta cần điền một trạng từ (adv).",
+                    step4: "Trạng từ 'adversely' mang nghĩa ảnh hưởng tiêu cực/bất lợi."
+                }
+            },
+            {
+                id: 14,
+                question: "There is a growing ________ among young people regarding the importance of mental health in today’s fast-paced society.",
+                options: [{key:"A",text:"aware"},{key:"B",text:"awareness"},{key:"C",text:"unaware"},{key:"D",text:"awarely"}],
+                correct: "B",
+                explanation: {
+                    step1: "Ngày càng có sự nhận thức gia tăng trong giới trẻ về tầm quan trọng của sức khỏe tinh thần trong xã hội nhịp độ nhanh ngày nay.",
+                    step2: "A. aware (adj); B. awareness (n - sự nhận thức); C. unaware (adj); D. awarely (adv).",
+                    step3: "Đứng sau mạo từ 'a' và tính từ dạng hiện tại phân từ 'growing' làm chủ ngữ thực sau 'There is', cần một danh từ (n).",
+                    step4: "Danh từ 'awareness' kết hợp tạo thành cụm 'growing awareness' (nhận thức ngày càng cao)."
+                }
+            },
+            {
+                id: 15,
+                question: "The manager emphasized that ________ is the key factor in building a successful and long-lasting relationship with our clients.",
+                options: [{key:"A",text:"professional"},{key:"B",text:"professionally"},{key:"C",text:"professionalism"},{key:"D",text:"professionalize"}],
+                correct: "C",
+                explanation: {
+                    step1: "Người quản lý nhấn mạnh rằng tác phong chuyên nghiệp là yếu tố then chốt trong việc xây dựng mối quan hệ thành công và lâu dài với khách hàng.",
+                    step2: "A. professional (adj/n); B. professionally (adv); C. professionalism (n - sự chuyên nghiệp, tác phong chuyên nghiệp); D. professionalize (v).",
+                    step3: "Vị trí đứng trước động từ 'is' đóng vai trò làm chủ ngữ chính cho mệnh đề sau 'that', ta cần một danh từ trừu tượng.",
+                    step4: "Danh từ 'professionalism' chỉ tác phong chuyên nghiệp là đáp án đúng."
+                }
+            },
+            {
+                id: 16,
+                question: "The antique dealer found a ______ clock hidden behind a pile of old newspapers in the basement.",
+                options: [{key:"A",text:"German golden tiny circular"},{key:"B",text:"tiny circular golden German"},{key:"C",text:"circular tiny German golden"},{key:"D",text:"golden German circular tiny"}],
+                correct: "B",
+                explanation: {
+                    step1: "Người buôn đồ cổ tìm thấy một chiếc đồng hồ Đức màu vàng, hình tròn nhỏ nhắn nằm ẩn sau đống báo cũ dưới tầng hầm.",
+                    step2: "Áp dụng công thức trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích các từ: tiny (Size) -> circular (Shape) -> golden (Color) -> German (Origin). Trật tự đúng: tiny circular golden German.",
+                    step4: "Do đó chọn phương án B."
+                }
+            },
+            {
+                id: 17,
+                question: "Due to his ________ in the field of artificial intelligence, he was invited to speak at the international tech conference.",
+                options: [{key:"A",text:"expert"},{key:"B",text:"expertise"},{key:"C",text:"expertly"},{key:"D",text:"expertize"}],
+                correct: "B",
+                explanation: {
+                    step1: "Nhờ chuyên môn của mình trong lĩnh vực trí tuệ nhân tạo, anh ấy đã được mời phát biểu tại hội nghị công nghệ quốc tế.",
+                    step2: "A. expert (n - chuyên gia/adj); B. expertise (n - chuyên môn, sự thành thạo nghiệp vụ); C. expertly (adv); D. expertize (v).",
+                    step3: "Đứng sau tính từ sở hữu 'his' cần một danh từ (n). Ngữ cảnh nhấn mạnh 'nhờ vào kiến thức chuyên môn uyên bác của anh ấy'.",
+                    step4: "Chọn danh từ trừu tượng 'expertise'. Loại A vì 'expert' chỉ bản thân con người chuyên gia không khớp nghĩa đoạn này."
+                }
+            },
+            {
+                id: 18,
+                question: "The government has introduced several measures to ________ the process of starting a new business for young entrepreneurs.",
+                options: [{key:"A",text:"simple"},{key:"B",text:"simplicity"},{key:"C",text:"simplify"},{key:"D",text:"simply"}],
+                correct: "C",
+                explanation: {
+                    step1: "Chính phủ đã đưa ra một vài biện pháp nhằm đơn giản hóa quy trình khởi nghiệp cho các doanh nhân trẻ.",
+                    step2: "A. simple (adj); B. simplicity (n); C. simplify (v - đơn giản hóa); D. simply (adv).",
+                    step3: "Đứng sau từ chỉ mục đích 'to' để bổ ngữ cho danh từ tân ngữ 'the process' phía sau, vị trí này cần một động từ nguyên thể (V-bare).",
+                    step4: "Động từ 'simplify' (làm cho đơn giản) là lựa chọn chính xác."
+                }
+            },
+            {
+                id: 19,
+                question: "Her ________ to the project was invaluable, and without her help, we would not have finished it on time.",
+                options: [{key:"A",text:"contribute"},{key:"B",text:"contribution"},{key:"C",text:"contributory"},{key:"D",text:"contributed"}],
+                correct: "B",
+                explanation: {
+                    step1: "Sự đóng góp của cô ấy cho dự án là vô giá, và nếu không có sự giúp đỡ của cô ấy, chúng tôi đã không hoàn thành đúng hạn.",
+                    step2: "A. contribute (v); B. contribution (n - sự đóng góp); C. contributory (adj); D. contributed (v-ed).",
+                    step3: "Đứng sau tính từ sở hữu 'Her' đứng làm chủ ngữ chính đứng trước động từ 'was', ta cần điền một danh từ (n).",
+                    step4: "Danh từ 'contribution' đáp ứng hoàn hảo về mặt từ loại và ngữ nghĩa."
+                }
+            },
+            {
+                id: 20,
+                question: "Children should be encouraged to be ________ and creative rather than just memorizing facts from their textbooks at school.",
+                options: [{key:"A",text:"imagine"},{key:"B",text:"imagination"},{key:"C",text:"imaginative"},{key:"D",text:"imaginatively"}],
+                correct: "C",
+                explanation: {
+                    step1: "Trẻ em nên được khuyến khích trở nên giàu trí tưởng tượng và sáng tạo thay vì chỉ ghi nhớ các sự kiện từ sách giáo khoa ở trường.",
+                    step2: "A. imagine (v); B. imagination (n); C. imaginative (adj - giàu trí tưởng tượng); D. imaginatively (adv).",
+                    step3: "Đứng sau động từ liên kết 'be' và song hành cùng tính từ 'creative' qua liên từ 'and', vị trí này cần một tính từ (adj) chỉ phẩm chất con người.",
+                    step4: "Tính từ 'imaginative' (giàu trí tưởng tượng) là đáp án đúng."
+                }
+            },
+            {
+                id: 21,
+                question: "The ________ of the historical documents proved that the land originally belonged to the local indigenous community centuries ago.",
+                options: [{key:"A",text:"authentic"},{key:"B",text:"authenticate"},{key:"C",text:"authenticity"},{key:"D",text:"authentically"}],
+                correct: "C",
+                explanation: {
+                    step1: "Tính xác thực của các tài liệu lịch sử đã chứng minh rằng mảnh đất ban đầu thuộc về cộng đồng bản địa địa phương từ nhiều thế kỷ trước.",
+                    step2: "A. authentic (adj); B. authenticate (v); C. authenticity (n - tính xác thực, độ chân thật); D. authentically (adv).",
+                    step3: "Khoảng trống đứng giữa mạo từ 'The' và giới từ 'of' làm chủ ngữ cho động từ 'proved', ta cần điền một danh từ (n).",
+                    step4: "Danh từ 'authenticity' mang nghĩa tính chính xác, đích thực của văn bản."
+                }
+            },
+            {
+                id: 22,
+                question: "The interior designer suggested buying a ______ sofa to complement the modern aesthetic of the living room.",
+                options: [{key:"A",text:"leather comfortable oversized gray"},{key:"B",text:"comfortable oversized gray leather"},{key:"C",text:"gray comfortable leather oversized"},{key:"D",text:"oversized gray leather comfortable"}],
+                correct: "B",
+                explanation: {
+                    step1: "Nhà thiết kế nội thất đề xuất mua một chiếc sofa da màu xám, quá khổ và thoải mái để bổ sung cho thẩm mỹ hiện đại của phòng khách.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích các từ: comfortable (Opinion) -> oversized (Size) -> gray (Color) -> leather (Material). Do đó thứ tự đúng là: comfortable oversized gray leather.",
+                    step4: "Phương án B trùng khớp hoàn toàn cấu trúc."
+                }
+            },
+            {
+                id: 23,
+                question: "Technology has ________ transformed the way we communicate with each other, making the world feel like a much smaller place.",
+                options: [{key:"A",text:"revolution"},{key:"B",text:"revolutionary"},{key:"C",text:"revolutionize"},{key:"D",text:"revolutionarily"}],
+                correct: "D",
+                explanation: {
+                    step1: "Công nghệ đã thay đổi một cách mang tính cách mạng cách chúng ta giao tiếp với nhau, khiến thế giới có cảm giác nhỏ hơn nhiều.",
+                    step2: "A. revolution (n); B. revolutionary (adj); C. revolutionize (v); D. revolutionarily (adv - một cách mang tính cách mạng).",
+                    step3: "Khoảng trống nằm giữa trợ động từ 'has' và phân từ hai 'transformed' nên cần một trạng từ (adv) bổ nghĩa cho hành động biến đổi đó.",
+                    step4: "Trạng từ 'revolutionarily' đáp ứng chính xác vị trí ngữ pháp này."
+                }
+            },
+            {
+                id: 24,
+                question: "It is ________ that the local authorities will take immediate action to address the problem of air pollution in the city.",
+                options: [{key:"A",text:"hope"},{key:"B",text:"hopeful"},{key:"C",text:"hopefully"},{key:"D",text:"hopelessness"}],
+                correct: "B",
+                explanation: {
+                    step1: "Hy vọng rằng chính quyền địa phương sẽ có hành động ngay lập tức để giải quyết vấn đề ô nhiễm không khí trong thành phố.",
+                    step2: "A. hope (v/n); B. hopeful (adj - đầy hy vọng); C. hopefully (adv); D. hopelessness (n).",
+                    step3: "Áp dụng cấu trúc: It + is + adj + that + clause. Vị trí sau cấu trúc hệ tobe cần một tính từ.",
+                    step4: "Tính từ 'hopeful' điền vào cấu trúc giả định tình huống mang nghĩa đầy hứa hẹn, tràn trề hy vọng."
+                }
+            },
+            {
+                id: 25,
+                question: "The sudden ________ in the stock market caused a lot of panic among investors who had put their life savings there.",
+                options: [{key:"A",text:"fluctuated"},{key:"B",text:"fluctuation"},{key:"C",text:"fluctuating"},{key:"D",text:"fluctuant"}],
+                correct: "B",
+                explanation: {
+                    step1: "Sự biến động đột ngột của thị trường chứng khoán đã gây ra nhiều sự hoảng loạn cho các nhà đầu tư, những người đã gửi tiền tiết kiệm cả đời của họ ở đó.",
+                    step2: "A. fluctuated (v-ed); B. fluctuation (n - sự biến động, trồi sụt); C. fluctuating (v-ing); D. fluctuant (adj).",
+                    step3: "Đứng sau tính từ 'sudden' và trước giới từ 'in' làm vai trò làm chủ ngữ chính của câu, ta bắt buộc phải chọn danh từ (n).",
+                    step4: "Danh từ 'fluctuation' (sự dao động, biến động giá cả) là lựa chọn duy nhất đúng."
+                }
+            },
+            {
+                id: 26,
+                question: "He kept his precious collection in a ______ box, which had been passed down through five generations.",
+                options: [{key:"A",text:"wooden ancient small square"},{key:"B",text:"ancient small wooden square"},{key:"C",text:"small ancient square wooden"},{key:"D",text:"small square ancient wooden"}],
+                correct: "C",
+                explanation: {
+                    step1: "Anh giữ bộ sưu tập quý giá của mình trong một chiếc hộp gỗ hình vuông cổ kính nhỏ nhắn, chiếc hộp đã được truyền lại qua năm thế hệ.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích đặc tính: small (Size) -> ancient (Age) -> square (Shape) -> wooden (Material). Sắp xếp lại thành cụm: small ancient square wooden.",
+                    step4: "Do đó ta chọn đáp án C."
+                }
+            },
+            {
+                id: 27,
+                question: "The ________ of the new tax law has sparked intense debate among politicians and citizens across the whole country recently.",
+                options: [{key:"A",text:"approve"},{key:"B",text:"approval"},{key:"C",text:"approved"},{key:"D",text:"approvingly"}],
+                correct: "B",
+                explanation: {
+                    step1: "Sự thông qua luật thuế mới đã làm dấy lên cuộc tranh luận gay gắt giữa các chính trị gia và người dân trên khắp cả nước gần đây.",
+                    step2: "A. approve (v); B. approval (n - sự phê duyệt, thông qua); C. approved (v-ed); D. approvingly (adv).",
+                    step3: "Khoảng trống đứng giữa mạo từ 'The' và giới từ 'of' làm nhiệm vụ chủ ngữ câu trước động từ 'has sparked', cần một danh từ (n).",
+                    step4: "Đuôi '-al' ở đây tạo thành danh từ đặc biệt 'approval' (sự phê chuẩn)."
+                }
+            },
+            {
+                id: 28,
+                question: "He spoke so ________ that the entire audience was moved to tears by his tragic story of survival and hope.",
+                options: [{key:"A",text:"emotion"},{key:"B",text:"emotional"},{key:"C",text:"emotionally"},{key:"D",text:"emotionalize"}],
+                correct: "C",
+                explanation: {
+                    step1: "Anh ấy đã nói chuyện một cách đầy cảm xúc đến mức toàn bộ khán giả đều rơi nước mắt trước câu chuyện bi thảm về sự sống sót và hy vọng của anh.",
+                    step2: "A. emotion (n); B. emotional (adj); C. emotionally (adv - một cách đầy cảm xúc); D. emotionalize (v).",
+                    step3: "Áp dụng cấu trúc mức độ: S + động từ thường (spoke) + so + adv + that. Cần một trạng từ để bổ nghĩa cho cách thức nói của chủ ngữ.",
+                    step4: "Trạng từ 'emotionally' đáp ứng chính xác công thức ngữ pháp."
+                }
+            },
+            {
+                id: 29,
+                question: "The ________ of the species is threatened by the loss of their natural habitat due to deforestation and human activities.",
+                options: [{key:"A",text:"survive"},{key:"B",text:"survival"},{key:"C",text:"or survivor"},{key:"D",text:"surviving"}],
+                correct: "B",
+                explanation: {
+                    step1: "Sự sống sót của loài sinh vật này đang bị đe dọa bởi việc mất đi môi trường sống tự nhiên do nạn phá rừng và các hoạt động của con người.",
+                    step2: "A. survive (v); B. survival (n - sự sống sót, sự tồn tại sinh học); C. survivor (n - người sống sót); D. surviving (v-ing/adj).",
+                    step3: "Đứng sau mạo từ 'The' và đứng trước giới từ 'of' làm chủ ngữ chỉ sự việc trừu tượng, ta cần điền một danh từ.",
+                    step4: "Danh từ 'survival' là phù hợp nhất. Loại C vì 'survivor' thường chỉ người sống sót sau thảm họa, không đi với danh từ loài vật số ít 'the species'."
+                }
+            },
+            {
+                id: 30,
+                question: "High levels of ________ can lead to various health problems, including heart disease and high blood pressure in middle-aged people.",
+                options: [{key:"A",text:"anxious"},{key:"B",text:"anxiety"},{key:"C",text:"anxiously"},{key:"D",text:"anxiousness"}],
+                correct: "B",
+                explanation: {
+                    step1: "Mức độ lo lắng cao có thể dẫn đến các vấn đề sức khỏe khác nhau, bao gồm bệnh tim và huyết áp cao ở những người trung niên.",
+                    step2: "A. anxious (adj); B. anxiety (n - nỗi lo âu, sự lo lắng tâm lý); C. anxiously (adv); D. anxiousness (n).",
+                    step3: "Đứng sau giới từ 'of' đóng vai trò cấu thành cụm chủ ngữ lớn đứng trước động từ khuyết thiếu 'can lead to', cần điền một danh từ.",
+                    step4: "Danh từ chuẩn mực phổ biến nhất là 'anxiety'. 'Anxiousness' là từ ít thông dụng và không dùng trong văn phong y khoa học thuật."
+                }
+            },
+            {
+                id: 31,
+                question: "The museum displays several ______ statues that were recovered from the ruins of the ancient Roman empire.",
+                options: [{key:"A",text:"bronze magnificent life-sized Greek"},{key:"B",text:"magnificent life-sized Greek bronze"},{key:"C",text:"Greek bronze magnificent life-sized"},{key:"D",text:"life-sized Greek bronze magnificent"}],
+                correct: "B",
+                explanation: {
+                    step1: "Bảo tàng trưng bày một số bức tượng Hy Lạp bằng đồng, kích thước như người thật rất lộng lẫy được phục hồi từ đống đổ nát của đế chế La Mã cổ đại.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích đặc tính: magnificent (Opinion) -> life-sized (Size) -> Greek (Origin) -> bronze (Material). Thứ tự chuẩn xác: magnificent life-sized Greek bronze.",
+                    step4: "Do đó phương án B là đáp án đúng."
+                }
+            },
+            {
+                id: 42,
+                question: "There is no ________ evidence to support the theory that aliens have visited our planet in the distant past.",
+                options: [{key:"A",text:"conclude"},{key:"B",text:"conclusion"},{key:"C",text:"conclusive"},{key:"D",text:"conclusively"}],
+                correct: "C",
+                explanation: {
+                    step1: "Không có bằng chứng thuyết phục mang tính quyết định nào để hỗ trợ giả thuyết rằng người ngoài hành tinh đã đến thăm hành tinh của chúng ta trong quá khứ xa xôi.",
+                    step2: "A. conclude (v); B. conclusion (n); C. conclusive (adj - mang tính xác thực, thuyết phục, có tính quyết định); D. conclusively (adv).",
+                    step3: "Vị trí nằm ở trước danh từ số ít/không đếm được 'evidence' nhằm bổ nghĩa tính chất cho danh từ đó, ta cần một tính từ (adj).",
+                    step4: "Tính từ 'conclusive' tạo thành cụm từ cố định 'conclusive evidence' (bằng chứng thuyết phục/xác đáng)."
+                }
+            },
+            {
+                id: 32,
+                question: "The ________ of the team’s failure was attributed to a lack of proper coordination between the defense and the midfield.",
+                options: [{key:"A",text:"explain"},{key:"B",text:"explanatory"},{key:"C",text:"explanation"},{key:"D",text:"explainable"}],
+                correct: "C",
+                explanation: {
+                    step1: "Lời giải thích cho thất bại của đội bóng được cho là do thiếu sự phối hợp hợp lý giữa hàng phòng ngự và hàng tiền vệ.",
+                    step2: "A. explain (v); B. explanatory (adj); C. explanation (n - lời giải thích); D. explainable (adj).",
+                    step3: "Đứng ở vị trí đầu câu giữa mạo từ 'The' và giới từ 'of' làm nhiệm vụ chủ ngữ chính đứng trước cụm bị động 'was attributed to', cần một danh từ (n).",
+                    step4: "Danh từ 'explanation' đáp ứng hoàn toàn chính xác cấu trúc từ loại."
+                }
+            },
+            {
+                id: 33,
+                question: "Most employees found the new working hours very ________, as they now have more time to spend with their families.",
+                options: [{key:"A",text:"satisfy"},{key:"B",text:"satisfaction"},{key:"C",text:"satisfactory"},{key:"D",text:"satisfactorily"}],
+                correct: "C",
+                explanation: {
+                    step1: "Hầu hết các nhân viên đều nhận thấy giờ làm việc mới rất thỏa đáng, vì hiện tại họ có nhiều thời gian hơn dành cho gia đình.",
+                    step2: "A. satisfy (v); B. satisfaction (n); C. satisfactory (adj - vừa lòng, thỏa đáng, làm hài lòng); D. satisfactorily (adv).",
+                    step3: "Áp dụng cấu trúc nhận định: find + something + adj. Đứng sau danh từ tân ngữ 'the new working hours' và trạng từ 'very' phải là một tính từ.",
+                    step4: "Tính từ 'satisfactory' bổ nghĩa cho tính chất của giờ giấc làm việc hợp lý."
+                }
+            },
+            {
+                id: 34,
+                question: "We spent the afternoon wandering through the ______ streets of the old town, admiring the unique architecture.",
+                options: [{key:"A",text:"narrow winding cobblestone charming"},{key:"B",text:"cobblestone charming narrow winding"},{key:"C",text:"winding cobblestone charming narrow"},{key:"D",text:"charming narrow winding cobblestone"}],
+                correct: "D",
+                explanation: {
+                    step1: "Chúng tôi dành cả buổi chiều lang thang qua những con phố lát đá cuội quanh co nhỏ hẹp đầy duyên dáng của khu phố cổ, chiêm ngưỡng kiến trúc độc đáo.",
+                    step2: "Áp dụng công thức trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích từ loại: charming (Opinion) -> narrow (Size) -> winding (Shape) -> cobblestone (Material). Thứ tự sắp xếp đúng: charming narrow winding cobblestone.",
+                    step4: "Do đó ta chọn đáp án D."
+                }
+            },
+            {
+                id: 35,
+                question: "We should prioritize the ________ of our cultural heritage to ensure that future generations can learn about our shared history.",
+                options: [{key:"A",text:"preserve"},{key:"B",text:"preservation"},{key:"C",text:"preservative"},{key:"D",text:"preserved"}],
+                correct: "B",
+                explanation: {
+                    step1: "Chúng ta nên ưu tiên việc bảo tồn di sản văn hóa của mình để đảm bảo rằng các thế hệ tương lai có thể tìm hiểu về lịch sử chung của chúng ta.",
+                    step2: "A. preserve (v); B. preservation (n - sự bảo tồn, gìn giữ); C. preservative (n - chất bảo quản thực phẩm); D. preserved (v-ed).",
+                    step3: "Đứng giữa mạo từ 'the' và giới từ 'of' đóng vai trò làm tân ngữ cho động từ 'prioritize', ta cần điền một danh từ chỉ hành động.",
+                    step4: "Danh từ 'preservation' mang ý nghĩa bảo tồn văn hóa lịch sử. Loại C vì 'preservative' mang nghĩa hoàn toàn khác biệt liên quan công nghiệp đồ ăn."
+                }
+            },
+            {
+                id: 36,
+                question: "She bought a ______ laptop bag to protect her expensive equipment while traveling for business purposes.",
+                options: [{key:"A",text:"durable black nylon protective"},{key:"B",text:"durable black protective nylon"},{key:"C",text:"durable protective black nylon"},{key:"D",text:"protective nylon durable black"}],
+                correct: "C",
+                explanation: {
+                    step1: "Cô ấy đã mua một chiếc túi đựng laptop bằng nylon màu đen bền bỉ có tính năng bảo vệ để bảo vệ thiết bị đắt tiền của mình khi đi công tác.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích các lớp nghĩa: durable (Opinion) -> protective (Purpose/đặc tính bảo vệ) -> black (Color) -> nylon (Material). Trật tự đúng: durable protective black nylon.",
+                    step4: "Phương án C sắp xếp chính xác quy luật."
+                }
+            },
+            {
+                id: 37,
+                question: "The instructions provided in the manual were quite ________, leading to a lot of confusion among the users of the machine.",
+                options: [{key:"A",text:"contradict"},{key:"B",text:"contradictory"},{key:"C",text:"contradiction"},{key:"D",text:"contradictorily"}],
+                correct: "B",
+                explanation: {
+                    step1: "Các hướng dẫn được cung cấp trong sách hướng dẫn khá mâu thuẫn, dẫn đến nhiều sự bối rối cho những người sử dụng máy.",
+                    step2: "A. contradict (v); B. contradictory (adj - mang tính mâu thuẫn trái ngược); C. contradiction (n); D. contradictorily (adv).",
+                    step3: "Đứng sau hệ động từ tobe ở quá khứ số nhiều 'were' và trạng từ chỉ mức độ mức độ hạn chế 'quite', ta cần điền một tính từ (adj).",
+                    step4: "Tính từ 'contradictory' biểu thị tính từ chỉ đặc tính của văn bản hướng dẫn viết sai lệch."
+                }
+            },
+            {
+                id: 38,
+                question: "The ________ of renewable energy sources is essential to reduce our carbon footprint and combat the effects of climate change.",
+                options: [{key:"A",text:"utilize"},{key:"B",text:"utilization"},{key:"C",text:"utilitarian"},{key:"D",text:"utilized"}],
+                correct: "B",
+                explanation: {
+                    step1: "Việc sử dụng các nguồn năng lượng tái tạo là cần thiết để giảm lượng khí thải carbon và chống lại các tác động của biến đổi khí hậu.",
+                    step2: "A. utilize (v); B. utilization (n - sự tận dụng, sự sử dụng hiệu quả); C. utilitarian (adj); D. utilized (v-ed).",
+                    step3: "Nằm ở vị trí đầu câu làm chủ ngữ đứng trước cấu trúc giới từ 'of' và hệ động từ 'is', cần điền một danh từ (n).",
+                    step4: "Danh từ 'utilization' bổ sung ý nghĩa hành vi khai thác áp dụng công nghệ."
+                }
+            },
+            {
+                id: 39,
+                question: "The artist’s work is ________, as he uses a unique combination of traditional techniques and modern digital tools in his paintings.",
+                options: [{key:"A",text:"distinguish"},{key:"B",text:"distinctively"},{key:"C",text:"distinction"},{key:"D",text:"distinctive"}],
+                correct: "D",
+                explanation: {
+                    step1: "Tác phẩm của người nghệ sĩ này rất đặc biệt, mang phong cách riêng biệt vì ông sử dụng sự kết hợp độc đáo giữa các kỹ thuật truyền thống và công cụ kỹ thuật số hiện đại trong các bức tranh của mình.",
+                    step2: "A. distinguish (v); B. distinctively (adv); C. distinction (n); D. distinctive (adj - đặc biệt, mang tính đặc trưng riêng biệt).",
+                    step3: "Đứng sau động từ liên kết hệ tobe 'is' làm vị ngữ bổ nghĩa cho chủ ngữ 'The artist's work', ta cần một tính từ (adj).",
+                    step4: "Tính từ 'distinctive' chỉ đặc trưng độc đáo cá nhân của tác phẩm nghệ thuật nghệ thuật."
+                }
+            },
+            {
+                id: 40,
+                question: "Environmentalists are calling for the ________ of plastic waste to protect the oceans and marine life from further damage.",
+                options: [{key:"A",text:"eliminate"},{key:"B",text:"elimination"},{key:"C",text:"eliminative"},{key:"D",text:"eliminated"}],
+                correct: "B",
+                explanation: {
+                    step1: "Các nhà bảo vệ môi trường đang kêu gọi loại bỏ hoàn toàn rác thải nhựa để bảo vệ đại dương và sinh vật biển khỏi bị hư hại thêm.",
+                    step2: "A. eliminate (v); B. elimination (n - sự loại bỏ, triệt tiêu); C. eliminative (adj); D. eliminated (v-ed).",
+                    step3: "Khoảng trống đứng giữa mạo từ 'the' và giới từ 'of' làm tân ngữ đứng sau cụm giới từ 'calling for', bắt buộc phải là một danh từ (n).",
+                    step4: "Danh từ 'elimination' chỉ hành động xóa sổ, loại bỏ rác thải."
+                }
+            },
+            {
+                id: 41,
+                question: "The athlete was ________ after winning the gold medal, as it was a goal she had worked towards for years.",
+                options: [{key:"A",text:"joy"},{key:"B",text:"joyful"},{key:"C",text:"joyfully"},{key:"D",text:"joyfulness"}],
+                correct: "B",
+                explanation: {
+                    step1: "Vận động viên đã vô cùng vui mừng sau khi giành được huy chương vàng, vì đó là mục tiêu cô đã nỗ lực hướng tới trong nhiều năm.",
+                    step2: "A. joy (n); B. joyful (adj - vui sướng, hân hoan); C. joyfully (adv); D. joyfulness (n).",
+                    step3: "Đứng sau động từ tobe ở quá khứ đơn 'was' đóng vai trò biểu đạt trạng thái cảm xúc của chủ ngữ người 'The athlete', cần một tính từ (adj).",
+                    step4: "Tính từ 'joyful' đáp ứng đầy đủ tiêu chí từ loại vị ngữ."
+                }
+            },
+            {
+                id: 43,
+                question: "The company decided to ________ its operations to Asian markets to take advantage of the growing demand for their products.",
+                options: [{key:"A",text:"expand"},{key:"B",text:"expansion"},{key:"C",text:"expansive"},{key:"D",text:"expansively"}],
+                correct: "A",
+                explanation: {
+                    step1: "Công ty đã quyết định mở rộng hoạt động sang thị trường châu Á để tận dụng nhu cầu ngày càng tăng đối với các sản phẩm của họ.",
+                    step2: "A. expand (v - mở rộng phạm vi/quy mô); B. expansion (n); C. expansive (adj); D. expansively (adv).",
+                    step3: "Nằm sau động từ quy định mục đích cấu trúc 'decided to' bắt buộc phải cộng một động từ nguyên thể (V-bare).",
+                    step4: "Động từ 'expand' mang nghĩa mở rộng thị trường kinh doanh hoàn toàn chuẩn xác."
+                }
+            },
+            {
+                id: 44,
+                question: "They decided to stay in a ______ cottage located on the edge of a serene mountain lake.",
+                options: [{key:"A",text:"small rustic English stone"},{key:"B",text:"English stone small rustic"},{key:"C",text:"rustic small English stone"},{key:"D",text:"stone rustic small English"}],
+                correct: "A",
+                explanation: {
+                    step1: "Họ quyết định ở trong một căn nhà gỗ nhỏ kiểu Anh mộc mạc bằng đá nằm bên bờ một hồ nước trên núi thanh bình.",
+                    step2: "Áp dụng công thức trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích các từ bổ nghĩa: small (Size) -> rustic (Opinion/phong cách mộc mạc) -> English (Origin) -> stone (Material). Trật tự sắp đặt chuẩn: small rustic English stone.",
+                    step4: "Do đó phương án A là đáp án đúng."
+                }
+            },
+            {
+                id: 45,
+                question: "The eccentric professor always carries a ______ umbrella, even when there isn’t a single cloud in the sky.",
+                options: [{key:"A",text:"silk long colorful Japanese"},{key:"B",text:"colorful long Japanese silk"},{key:"C",text:"Japanese silk colorful long"},{key:"D",text:"long colorful silk Japanese"}],
+                correct: "B",
+                explanation: {
+                    step1: "Vị giáo sư lập dị luôn mang theo một chiếc ô lụa Nhật Bản dài màu sắc sặc sỡ, ngay cả khi trời không có một bóng mây.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích từ loại: colorful (Opinion) -> long (Size/Shape) -> Japanese (Origin) -> silk (Material). Thứ tự chuẩn xác: colorful long Japanese silk.",
+                    step4: "Phương án B thỏa mãn chính xác quy luật sắp xếp tính từ."
+                }
+            },
+            {
+                id: 46,
+                question: "It is ________ to predict exactly how the economy will perform over the next few months given the current instability.",
+                options: [{key:"A",text:"possible"},{key:"B",text:"possibility"},{key:"C",text:"impossible"},{key:"D",text:"impossibly"}],
+                correct: "C",
+                explanation: {
+                    step1: "Thật là không thể dự đoán chính xác nền kinh tế sẽ hoạt động như thế nào trong vài tháng tới do sự bất ổn hiện tại.",
+                    step2: "A. possible (adj - có thể); B. possibility (n); C. impossible (adj - không thể); D. impossibly (adv).",
+                    step3: "Cấu trúc: It + is + adj + to V. Ngữ cảnh câu có cụm từ 'given the current instability' (xét tới sự bất ổn hiện tại) chỉ một tình huống tiêu cực, không thể đoán định trước.",
+                    step4: "Do đó phải chọn tính từ mang nghĩa phủ định 'impossible' (không thể)."
+                }
+            },
+            {
+                id: 47,
+                question: "The ________ of the building’s structure was confirmed by a team of independent engineers after a thorough safety inspection.",
+                options: [{key:"A",text:"stable"},{key:"B",text:"stability"},{key:"C",text:"stabilize"},{key:"D",text:"stably"}],
+                correct: "B",
+                explanation: {
+                    step1: "Độ ổn định trong cấu trúc của tòa nhà đã được xác nhận bởi một đội ngũ kỹ sư độc lập sau một cuộc kiểm tra an toàn toàn diện.",
+                    step2: "A. stable (adj); B. stability (n - độ ổn định, sự vững chắc); C. stabilize (v); D. stably (adv).",
+                    step3: "Đứng giữa mạo từ 'The' và cấu trúc giới từ 'of' làm nhiệm vụ chủ ngữ chính đứng trước cụm bị động 'was confirmed', cần một danh từ (n).",
+                    step4: "Danh từ 'stability' (độ vững chãi, ổn định) là đáp án đúng."
+                }
+            },
+            {
+                id: 48,
+                question: "The new regulations will ________ affect small businesses that do not have the resources to comply with the strict requirements.",
+                options: [{key:"A",text:"primary"},{key:"B",text:"primarily"},{key:"C",text:"primaryness"},{key:"D",text:"primariness"}],
+                correct: "B",
+                explanation: {
+                    step1: "Các quy định mới sẽ chủ yếu ảnh hưởng đến các doanh nghiệp nhỏ không có nguồn lực để tuân thủ các yêu cầu nghiêm ngặt.",
+                    step2: "A. primary (adj); B. primarily (adv - chủ yếu, phần lớn); C. primaryness (n); D. primariness (n).",
+                    step3: "Khoảng trống đứng giữa trợ động từ tương lai 'will' và động từ thường 'affect' nên cần một trạng từ (adv) bổ nghĩa.",
+                    step4: "Trạng từ 'primarily' mang nghĩa chủ yếu, tương tự từ 'mainly'."
+                }
+            },
+            {
+                id: 49,
+                question: "She fell in love with a ______ puppy at the shelter and decided to adopt him immediately.",
+                options: [{key:"A",text:"adorable tiny fluffy brown"},{key:"B",text:"brown adorable tiny fluffy"},{key:"C",text:"fluffy brown adorable tiny"},{key:"D",text:"tiny brown adorable fluffy"}],
+                correct: "A",
+                explanation: {
+                    step1: "Cô ấy đã yêu một chú chó con màu nâu xù xì nhỏ nhắn đáng yêu ở trại động vật và quyết định nhận nuôi chú ngay lập tức.",
+                    step2: "Áp dụng trật tự tính từ OpSACOMP.",
+                    step3: "Phân tích đặc tính từ vựng: adorable (Opinion) -> tiny (Size) -> fluffy (Shape/Đặc tính bề mặt) -> brown (Color). Sắp xếp lại thành cụm: adorable tiny fluffy brown.",
+                    step4: "Do đó ta chọn đáp án đúng là phương án A."
+                }
+            },
+            {
+                id: 50,
+                question: "The report provides a ________ analysis of the factors that led to the sudden decline in the company’s annual profits.",
+                options: [{key:"A",text:"comprehend"},{key:"B",text:"comprehensive"},{key:"C",text:"comprehension"},{key:"D",text:"comprehensively"}],
+                correct: "B",
+                explanation: {
+                    step1: "Báo cáo cung cấp một phân tích toàn diện về các yếu tố dẫn đến sự sụt giảm đột ngột trong lợi nhuận hàng năm của công ty.",
+                    step2: "A. comprehend (v); B. comprehensive (adj - toàn diện, sâu sắc và đầy đủ); C. comprehension (n); D. comprehensively (adv).",
+                    step3: "Vị trí nằm ở giữa mạo từ 'a' và danh từ số ít 'analysis' (sự phân tích) bắt buộc phải điền một tính từ (adj) bổ nghĩa.",
+                    step4: "Tính từ 'comprehensive' tạo thành thuật ngữ kinh tế 'comprehensive analysis' (phân tích toàn diện)."
+                }
+            }
+        ];
+
+        let userAnswers = {};
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioCtx();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                const now = audioCtx.currentTime;
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.1);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                } else {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(150, now);
+                    osc.frequency.linearRampToValueAtTime(100, now + 0.3);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                }
+            } catch(e) {}
+        }
+
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let confettiParticles = [];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function triggerConfetti() {
+            confettiParticles = [];
+            const colors = ['#6C5CE7', '#00CEC9', '#FF7675', '#FDCB6E', '#00D26A'];
+            for(let i=0; i<50; i++) {
+                confettiParticles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 6 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speedX: Math.random() * 4 - 2,
+                    speedY: Math.random() * 4 + 4,
+                    rotation: Math.random() * 360,
+                    rotationSpeed: Math.random() * 4 - 2
+                });
+            }
+            animateConfetti();
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let active = false;
+            confettiParticles.forEach(p => {
+                p.y += p.speedY;
+                p.x += p.speedX;
+                p.rotation += p.rotationSpeed;
+                if (p.y < canvas.height) active = true;
+                
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.rotation * Math.PI / 180);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                ctx.restore();
+            });
+            if (active) requestAnimationFrame(animateConfetti);
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = "";
+
+            quizData.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = "card";
+                card.id = `card-${q.id}`;
+
+                let html = `<div class="question-text"><strong>Câu ${index + 1}:</strong> ${q.question}</div>`;
+                
+                let shuffledOptions = [...q.options];
+                shuffleArray(shuffledOptions);
+
+                html += `<div class="options-container">`;
+                shuffledOptions.forEach(opt => {
+                    html += `
+                        <button class="option-btn" id="opt-${q.id}-${opt.key}" onclick="checkAnswer(${q.id}, '${opt.key}', '${q.correct}')">
+                            ${opt.key}. ${opt.text}
+                        </button>
+                    `;
+                });
+                html += `</div>`;
+
+                html += `
+                    <div class="explanation-box" id="explain-${q.id}">
+                        <div class="explanation-title">🌟 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="explanation-step"><strong>Bước 1 - Dịch nghĩa câu:</strong> ${q.explanation.step1}</div>
+                        <div class="explanation-step"><strong>Bước 2 - Phân tích cấu trúc:</strong> ${q.explanation.step2}</div>
+                        <div class="explanation-step"><strong>Bước 3 - Tại sao đáp án này ĐÚNG:</strong> ${q.explanation.step3}</div>
+                        <div class="explanation-step"><strong>Bước 4 - Tại sao các đáp án khác SAI:</strong> ${q.explanation.step4}</div>
+                    </div>
+                `;
+
+                card.innerHTML = html;
+                container.appendChild(card);
+            });
+        }
+
+        function checkAnswer(questionId, selectedKey, correctKey) {
+            if (userAnswers[questionId] !== undefined) return;
+
+            userAnswers[questionId] = (selectedKey === correctKey);
+            const card = document.getElementById(`card-${questionId}`);
+            const selectedBtn = document.getElementById(`opt-${questionId}-${selectedKey}`);
+            const correctBtn = document.getElementById(`opt-${questionId}-${correctKey}`);
+
+            if (selectedKey === correctKey) {
+                if (selectedBtn) selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                if (selectedBtn) selectedBtn.classList.add('wrong');
+                if (correctBtn) correctBtn.classList.add('correct');
+                card.classList.add('shake-animation');
+                playSound('wrong');
+                setTimeout(() => { card.classList.remove('shake-animation'); }, 500);
+            }
+
+            document.getElementById(`explain-${questionId}`).style.display = "block";
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+            const totalQuestions = quizData.length;
+
+            quizData.forEach(q => {
+                if (userAnswers[q.id] === true) correctCount++;
+            });
+
+            const scorePercentage = (correctCount / totalQuestions) * 100;
+            let comment = "";
+
+            if (scorePercentage < 50) {
+                comment = "Điểm chưa cao lắm, con nhớ ghi lại các cụm từ OpSACOMP ghép sai vào vở và thử lại thử thách lần nữa nhé!";
+            } else if (scorePercentage >= 50 && scorePercentage <= 80) {
+                comment = "Kết quả rất cố gắng! Con hãy đọc kỹ phần phân tích hậu tố nhận biết (danh từ, tính từ) để bứt phá điểm tuyệt đối nha.";
+            } else {
+                comment = "Quá siêu luôn! Con đã làm chủ hoàn toàn mảng Từ loại nâng cao và trật tự tính từ. Đi thi tự tin giật điểm tối đa con nhé!";
+            }
+
+            document.getElementById('modal-score-text').innerText = `${correctCount} / ${totalQuestions}`;
+            document.getElementById('modal-comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = "flex";
+            
+            if (scorePercentage >= 60) triggerConfetti();
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = "none";
+        }
+
+        window.onload = renderQuiz;
+    </script>
+</body>
+</html>
